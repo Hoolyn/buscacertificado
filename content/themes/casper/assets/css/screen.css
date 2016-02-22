@@ -7,6 +7,7 @@
     0.  Normalize
     1.  Icons
     2.  General
+    2.1 Typography
     3.  Utilities
     4.  General
     5.  Single Post
@@ -25,7 +26,7 @@
    0. normalize.css v3.0.3 | MIT License | git.io/normalize | (minified)
    ========================================================================== */
 
-html { 
+html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
@@ -71,7 +72,7 @@ button, input, optgroup, select, textarea {
 }
 button { overflow: visible; }
 button, select { text-transform: none; }
-button, html input[type="button"], 
+button, html input[type="button"],
 input[type="reset"], input[type="submit"] {
     -webkit-appearance: button;
     cursor: pointer;
@@ -225,30 +226,20 @@ h2 {
     letter-spacing: -1px;
 }
 
-h3 {
-    font-size: 3rem;
-}
+h3 { font-size: 3rem; }
 
-h4 {
-    font-size: 2.5rem;
-}
+h4 { font-size: 2.5rem; }
 
-h5 {
-    font-size: 2rem;
-}
+h5 { font-size: 2rem; }
 
-h6 {
-    font-size: 2rem;
-}
+h6 { font-size: 2rem; }
 
 a {
     color: #4A4A4A;
     transition: color 0.3s ease;
 }
 
-a:hover {
-    color: #111;
-}
+a:hover { color: #111; }
 
 p, ul, ol, dl {
     -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
@@ -258,9 +249,7 @@ p, ul, ol, dl {
     text-rendering: geometricPrecision;
 }
 
-ol, ul {
-    padding-left: 3rem;
-}
+ol, ul { padding-left: 3rem; }
 
 ol ol, ul ul,
 ul ol, ol ul {
@@ -285,13 +274,9 @@ dl dd {
     margin-bottom: 1em
 }
 
-li {
-    margin: 0.4em 0;
-}
+li { margin: 0.4em 0; }
 
-li li {
-    margin: 0;
-}
+li li { margin: 0; }
 
 hr {
     display: block;
@@ -439,6 +424,12 @@ margin on the iframe, cause it breaks stuff. */
 .fluid-width-video-wrapper iframe {
     margin: 0;
 }
+
+
+/* ==========================================================================
+   2.1 Typography - Setting typography base
+   ========================================================================== */
+
 
 
 /* ==========================================================================
@@ -788,28 +779,19 @@ body.nav-opened .nav {
     box-sizing: border-box;
     display: inline-block;
     float: right;
-    height: 38px;
-    padding: 0 15px;
-    border-style: solid;
-    border-width: 1px;
     opacity: 1;
     text-align: center;
-    font-size: 12px;
-    text-transform: uppercase;
-    line-height: 35px;
-    white-space: nowrap;
-    border-radius: 3px;
     transition: all 0.5s ease;
 }
 .menu-button:before {
-    font-size: 12px;
     font-weight: bold;
-    margin-right: 6px;
     position: relative;
-    top: 1px;
+    top: 3px;
+    font-size: 22px;
 }
 .menu-button:hover {
-    background: #fff;
+    color: #fff;
+    background: none;
 }
 .menu-button:focus {
     outline: 0;
@@ -818,10 +800,9 @@ body.nav-opened .nav {
 /* When the navigation is closed */
 .nav-closed .menu-button {
     color: #fff;
-    border-color: rgba(255, 255, 255, 0.6);
 }
 .nav-closed .menu-button:hover {
-    color: #222;
+    color: #fff;
 }
 
 /* When the navigation is closed and there is no cover image */
@@ -870,7 +851,7 @@ body.nav-opened .nav {
     margin: 10px 0 10px 0;
     font-size: 5rem;
     letter-spacing: -1px;
-    font-weight: 700;
+    font-weight: 300;
     font-family: "Open Sans", sans-serif;
     color: #fff;
 }
@@ -1604,6 +1585,21 @@ body:not(.post-template) .post-title {
 
 
 /* ==========================================================================
+   10.1 Home Page
+   ========================================================================== */
+
+.certificate-search {
+    vertical-align: top;
+
+}
+.certificate-search .inner { max-width: 1024px; }
+.certificate-search .page-title {
+    padding-top: 150px;
+    font-size: 3.4rem;
+}
+
+
+/* ==========================================================================
    11. Media Queries - Smaller than 900px
    ========================================================================== */
 
@@ -1631,9 +1627,7 @@ body:not(.post-template) .post-title {
         padding: 10% 0;
     }
 
-    .blog-logo img {
-        padding: 4px 0;
-    }
+    .blog-logo img { padding: 4px 0; }
 
     .page-title {
         font-size: 4rem;
@@ -1645,80 +1639,50 @@ body:not(.post-template) .post-title {
         line-height: 1.5em;
     }
 
-    .post {
-        font-size: 0.95em
-    }
+    .post { font-size: 0.95em }
 
-    body:not(.post-template) .post-title {
-        font-size: 3.2rem;
-    }
+    body:not(.post-template) .post-title { font-size: 3.2rem; }
 
-    hr {
-        margin: 2.4em 0;
-    }
+    hr { margin: 2.4em 0; }
 
-    ol, ul {
-        padding-left: 2em;
-    }
+    ol, ul { padding-left: 2em; }
 
     h1 {
         font-size: 4.5rem;
         text-indent: -2px;
     }
 
-    h2 {
-        font-size: 3.6rem;
-    }
+    h2 { font-size: 3.6rem; }
 
-    h3 {
-        font-size: 3.1rem;
-    }
+    h3 { font-size: 3.1rem; }
 
-    h4 {
-        font-size: 2.5rem;
-    }
+    h4 { font-size: 2.5rem; }
 
-    h5 {
-        font-size: 2.2rem;
-    }
+    h5 { font-size: 2.2rem; }
 
-    h6 {
-        font-size: 1.8rem;
-    }
+    h6 { font-size: 1.8rem; }
 
-    .author-profile {
-        padding-bottom: 4rem;
-    }
+    .author-profile { padding-bottom: 4rem; }
 
-    .author-profile .author-bio {
-        font-size: 1.6rem;
-    }
+    .author-profile .author-bio { font-size: 1.6rem; }
 
     .author-meta span {
         display: block;
         margin: 1.5rem 0;
     }
-    .author-profile .author-meta span {
-        font-size: 1.6rem;
-    }
+    .author-profile .author-meta span { font-size: 1.6rem; }
 
-    .post-head.main-header {
-        height:45vh;
-    }
+    .post-head.main-header { height:45vh; }
 
     .tag-head.main-header,
-    .author-head.main-header {
-        height: 30vh;
-    }
+    .author-head.main-header { height: 30vh; }
 
     .no-cover.post-head.main-header {
         height: 55px;
         padding: 0;
     }
 
-    .no-cover.author-head.main-header {
-        padding: 0;
-    }
+    .no-cover.author-head.main-header { padding: 0; }
 
     .read-next {
         -webkit-box-orient: vertical;
@@ -1729,9 +1693,7 @@ body:not(.post-template) .post-title {
         margin-top: 4rem;
     }
 
-    .read-next p {
-        display: none;
-    }
+    .read-next p { display: none; }
 
     .read-next-story.no-cover + .read-next-story.no-cover {
         border-top: rgba(0,0,100,0.06) 1px solid;
@@ -1752,9 +1714,7 @@ body:not(.post-template) .post-title {
         height: 40vh;
     }
 
-    .no-cover.main-header {
-        height: 30vh;
-    }
+    .no-cover.main-header { height: 30vh; }
 
     .archive-template .main-header {
         max-height: 20vh;
@@ -1767,23 +1727,24 @@ body:not(.post-template) .post-title {
         margin-bottom: 2rem;
     }
 
-    .blog-logo {
-        padding: 5px;
-    }
+    .blog-logo { padding: 5px; }
 
-    .blog-logo img {
-        height: 30px;
-    }
+    .blog-logo img { height: 30px; }
 
     .menu-button {
-        padding: 0 5px;
+        padding: 0 10px 0 5px;
         border-radius: 0;
         border-width: 0;
         color: #2e2e2e;
         background: transparent;
     }
+    .menu-button:before {
+        font-size: 17px;
+        top: 6px;
+    }
+
     .menu-button:hover {
-        color: #2e2e2e;
+        color: #0780a2;
         border-color: transparent;
         background: none;
     }
@@ -1798,30 +1759,19 @@ body:not(.post-template) .post-title {
         background: transparent;
     }
 
-    .no-cover .main-nav.overlay {
-        background: none;
-    }
-    .no-cover .main-nav.overlay .menu-button {
-        border: none;
-    }
+    .no-cover .main-nav.overlay { background: none; }
+    .no-cover .main-nav.overlay .menu-button { border: none; }
 
-    .main-nav.overlay .menu-button {
-        border-color: transparent;
-    }
+    .main-nav.overlay .menu-button { border-color: transparent; }
 
-    .nav-title {
-        top: 25px;
-
-    }
+    .nav-title { top: 25px; }
 
     .nav-close {
         position: absolute;
         top: 18px;
     }
 
-    .nav ul {
-        padding: 60px 9% 5%;
-    }
+    .nav ul { padding: 60px 9% 5%; }
 
     .inner,
     .pagination {
@@ -1839,43 +1789,27 @@ body:not(.post-template) .post-title {
         line-height: 1.65em;
     }
 
-    .post-date {
-        display: none;
-    }
+    .post-date { display: none; }
 
-    .post-template .post-header {
-        margin-bottom: 2rem;
-    }
+    .post-template .post-header { margin-bottom: 2rem; }
 
-    .post-template .post-date {
-        display: inline-block;
-    }
+    .post-template .post-date { display: inline-block; }
 
-    hr {
-        margin: 1.75em 0;
-    }
+    hr { margin: 1.75em 0; }
 
     p, ul, ol, dl {
         font-size: 0.95em;
         margin: 0 0 2.5rem 0;
     }
 
-    .page-title {
-        font-size: 3rem;
-    }
+    .page-title { font-size: 3rem; }
 
-    .post-excerpt p {
-        font-size: 0.85em;
-    }
+    .post-excerpt p { font-size: 0.85em; }
 
-    .page-description {
-        font-size: 1.6rem;
-    }
+    .page-description { font-size: 1.6rem; }
 
     h1, h2, h3,
-    h4, h5, h6 {
-        margin: 0 0 0.3em 0;
-    }
+    h4, h5, h6 { margin: 0 0 0.3em 0; }
 
     h1 {
         font-size: 2.8rem;
@@ -1887,29 +1821,17 @@ body:not(.post-template) .post-title {
         letter-spacing: 0;
     }
 
-    h3 {
-        font-size: 2.1rem;
-    }
+    h3 { font-size: 2.1rem; }
 
-    h4 {
-        font-size: 1.9rem;
-    }
+    h4 { font-size: 1.9rem; }
 
-    h5 {
-        font-size: 1.8rem;
-    }
+    h5 { font-size: 1.8rem; }
 
-    h6 {
-        font-size: 1.8rem;
-    }
+    h6 { font-size: 1.8rem; }
 
-    body:not(.post-template) .post-title {
-        font-size: 2.5rem;
-    }
+    body:not(.post-template) .post-title { font-size: 2.5rem; }
 
-    .post-template .site-footer {
-        margin-top: 0;
-    }
+    .post-template .site-footer { margin-top: 0; }
 
     .post-content img {
         padding: 0;
