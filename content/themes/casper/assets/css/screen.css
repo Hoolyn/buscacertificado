@@ -425,40 +425,113 @@ margin on the iframe, cause it breaks stuff. */
     margin: 0;
 }
 
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    text-decoration: none;
+}
+
+/* btn colors */
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.btn-default.active.focus,
+.btn-default.active:hover,
+.btn-default:hover {
+    color: #333;
+    background-color: #d4d4d4;
+    border-color: #8c8c8c;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.btn-primary:active.focus,
+.btn-primary:focus,
+.btn-primary.active:hover,
+.btn-primary:hover {
+    color: #fff;
+    background-color: #204d74;
+    border-color: #122b40;
+}
+
+/* btn size */
+.btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
 
 /* Style form */
-.form label {
-    color: #fff;
+form {
+    display: block;
+    margin-top: 0em;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
     font-family: "Open Sans", Arial, sans-serif;
     width: 100%;
+    display: inline-block;
     margin-bottom: 5px;
 }
 input {
     display: block;
     box-sizing: border-box;
     width: 100%;
-    outline: none
+    outline: none;
 }
-input[type="text"],
-input[type="password"] {
-    background: #f5f5f5;
-    border: 1px solid #e5e5e5;
-    font-size: 1.6rem;
-    padding: .8em .5em;
-    border-radius: 5px;
-    font-family: "Open-sans", Arial, sans-serif;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus {
+.form-control {
     background: #fff;
+    height: 42px;
+    color: #555;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    padding: .8em .5em;
+    border-radius: 3px;
+    font-family: "Open-sans", Arial, sans-serif;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
 }
 
-form select {
-    height: auto;
-    line-height: 46px;
-    display: block;
+.select-form {
     width: 100%;
+    display: block;
 }
 
 
@@ -1646,8 +1719,8 @@ body:not(.post-template) .post-title {
     display: block;
     text-align: left;
 }
-.search-location .form p {
-    margin-bottom: 20px;
+.search-location .form label {
+    color: #fff;
 }
 .search-location .more-links a {
     font-size: 12px;
@@ -1671,6 +1744,9 @@ body:not(.post-template) .post-title {
 
     blockquote {
         margin-left: 0;
+    }
+    .certificate-search .page-title {
+        padding-top: 30px;
     }
 
     .main-header {
@@ -1777,6 +1853,14 @@ body:not(.post-template) .post-title {
         margin-bottom: 15px;
         height: 40vh;
     }
+
+    /* home */
+    .search-location .form { padding: 30px 15px; }
+    .more-links a {
+        width: 100%;
+        float: left;
+    }
+    .more-links span { display: none; }
 
     .no-cover.main-header { height: 30vh; }
 

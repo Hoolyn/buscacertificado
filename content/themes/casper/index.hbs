@@ -15,24 +15,25 @@
         </div>
         <div class="search-location">
             <form class="form" action="">
-                <p>
+                <div class="form-group">
                     <label for="">Localização</label>
-                    <input id="name" type="text" placeholder="Rua..." required data-parsley-no-focus data-parsley-error-message="Please enter your name." />
-                </p>
-                <p>
+                    <input class="form-control" id="name" type="text" placeholder="Rua..." required data-parsley-no-focus data-parsley-error-message="Please enter your name." />
+                </div>
+                <div class="form-group">
                     <label for="">Tipo de certificado</label>
-                    <select class="select-form">
+                    <select class="form-control select-form">
                         <option>e-CPF</option>
                         <option>e-CNPJ</option>
                         <option>NF-e</option>
                         <option>NFC-e</option>
                     </select>
-                </p>
-                <div class="more-links">
+                </div>
+                <div class="more-links form-group">
                     <a href="javascript:void(0)">Entenda os tipos de certificado digital.</a>
                     <span>|</span>
                     <a href="javascript:void(0)">Saiba como comprar.</a>
                 </div>
+                <a href="javascript:void(0)" class="btn btn-primary btn-lg">Buscar certificado agora</a>
             </form>
         </div>
     </div>
@@ -42,7 +43,7 @@
 {{! The main content area on the homepage }}
 <main id="content" class="content" role="main">
 
-    <h1>Noticias</h1>
+    <h1>Dicas e Noticias</h1>
 
     {{! The tag below includes the post loop - partials/loop.hbs }}
     {{> "loop"}}
