@@ -11,7 +11,7 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: 'http://busca-certificado.herokuapp.com/',
+        url: 'http://buscacertificado.com.br/',
         fileStorage: false,
         mail: {
             transport: 'SMTP',

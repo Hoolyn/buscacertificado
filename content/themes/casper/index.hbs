@@ -13,12 +13,36 @@
         <div class="main-header-content inner">
             <h1 class="page-title">Encontre um posto de vendas de <strong>Certificado Digital</strong><br>próximo de você.</h1>
         </div>
+        <div class="search-location">
+            <form class="form" action="">
+                <p>
+                    <label for="">Localização</label>
+                    <input id="name" type="text" placeholder="Rua..." required data-parsley-no-focus data-parsley-error-message="Please enter your name." />
+                </p>
+                <p>
+                    <label for="">Tipo de certificado</label>
+                    <select class="select-form">
+                        <option>e-CPF</option>
+                        <option>e-CNPJ</option>
+                        <option>NF-e</option>
+                        <option>NFC-e</option>
+                    </select>
+                </p>
+                <div class="more-links">
+                    <a href="javascript:void(0)">Entenda os tipos de certificado digital.</a>
+                    <span>|</span>
+                    <a href="javascript:void(0)">Saiba como comprar.</a>
+                </div>
+            </form>
+        </div>
     </div>
     <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
 </header>
 
 {{! The main content area on the homepage }}
 <main id="content" class="content" role="main">
+
+    <h1>Noticias</h1>
 
     {{! The tag below includes the post loop - partials/loop.hbs }}
     {{> "loop"}}
