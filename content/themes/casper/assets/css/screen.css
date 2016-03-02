@@ -163,6 +163,7 @@ td, th{ padding: 0; }
 .icon-menu:before {
     content: "\f609";
 }
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700);
 /*
     IMPORTANT: When making any changes to the icon font, be sure to increment
     the version number by 1 in the @font-face rule. `?v=1` becomes `?v=2`
@@ -1001,49 +1002,83 @@ body.nav-opened .nav {
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
+
+.headding-blog {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.headding-blog h2 {
+    font-weight: 300;
+    color: #3278B4;
+}
+
+.main-posts {
+    max-width: 710px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-posts::after,
+.main-posts::before {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 .post {
     position: relative;
     width: 80%;
-    max-width: 710px;
-    margin: 4rem auto;
-    padding-bottom: 4rem;
-    border-bottom: #EBF2F6 1px solid;
+    max-width: 335px;
+    margin: 10px 5px;
+    padding-bottom: 2rem;
     word-wrap: break-word;
+    float: left;
+}
+.post .post-header {
+    min-height: 45px;
+}
+
+.post .post-img-feature {
+    width: 100%;
+    height: 150px;
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 10px;
 }
 
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
-.post:after {
-    display: block;
-    content: "";
-    width: 7px;
-    height: 7px;
-    border: #E7EEF2 1px solid;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    margin-left: -5px;
-    background: #FFF;
-    border-radius: 100%;
-    box-shadow: #FFF 0 0 0 5px;
-}
 
 body:not(.post-template) .post-title {
     font-size: 3.6rem;
 }
 
+h3.post-title {
+    font-size: 20px;
+    line-height: 0.875em !important;
+    margin-bottom: 0;
+}
+
 .post-title a {
     text-decoration: none;
+    font-size: 20px;
+    line-height: 0.875em !important;
 }
 
 .post-excerpt p {
     margin: 0;
-    font-size: 0.9em;
+    font-size: 16px;
     line-height: 1.7em;
+    font-family: Lato, "Hevetica Neue", Arial, sans-serif;
+    font-weight: 300;
 }
 
 .read-more {
     text-decoration: none;
+}
+.read-more:hover {
+    color: #3278B4;
 }
 
 .post-meta {
@@ -1480,7 +1515,7 @@ body:not(.post-template) .post-title {
 }
 
 .read-next-story .post:before {
-    content: "Read This Next";
+    content: "Leia também o próximo post";
     padding: 4px 10px 5px;
     text-transform: uppercase;
     font-size: 1.1rem;
@@ -1491,7 +1526,7 @@ body:not(.post-template) .post-title {
     transition: all 0.5s ease;
 }
 .read-next-story.prev .post:before {
-    content: "You Might Enjoy";
+    content: "Você pode ler também";
 }
 
 .read-next-story h2 {
@@ -1580,6 +1615,7 @@ body:not(.post-template) .post-title {
     font-size: 1.3rem;
     color: #9EABB3;
     text-align: center;
+    float: left;
 }
 
 .pagination a {
