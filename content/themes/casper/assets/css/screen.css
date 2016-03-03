@@ -1025,7 +1025,7 @@ body.nav-opened .nav {
     clear: both;
 }
 
-.post {
+.main-posts .post {
     position: relative;
     width: 80%;
     max-width: 335px;
@@ -1033,6 +1033,16 @@ body.nav-opened .nav {
     padding-bottom: 2rem;
     word-wrap: break-word;
     float: left;
+    border: none;
+}
+.post {
+    position: relative;
+    width: 80%;
+    max-width: 710px;
+    margin: 4rem auto;
+    padding-bottom: 4rem;
+    border-bottom: #EBF2F6 1px solid;
+    word-wrap: break-word;
 }
 .post .post-header {
     min-height: 45px;
