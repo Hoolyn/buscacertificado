@@ -9,7 +9,7 @@
             <a class="menu-button icon-menu" href="#"></a>
         {{/if}}
     </nav>
-    <div class="vertical certificate-search">
+    <div class="vertical certificate-search" ng-controller="DataController">
         <div class="main-header-content inner">
             <h1 class="page-title">Encontre um posto de vendas de <strong>Certificado Digital</strong><br>próximo de você.</h1>
         </div>
@@ -17,15 +17,18 @@
             <form class="form" action="">
                 <div class="form-group">
                     <label for="">Localização</label>
-                    <input class="form-control" id="name" type="text" placeholder="Rua..." required data-parsley-no-focus data-parsley-error-message="Please enter your name." />
+                    <input  ng-model="lat" class="form-control" name="lat" id="name" type="text" placeholder="Lat" required data-parsley-no-focus data-parsley-error-message="Please enter your name." />
+                    <input  ng-model="lon" class="form-control" name="lon" type="text" placeholder="Lon" required data-parsley-no-focus data-parsley-error-message="Please enter your name." />
+                    <input  ng-model="dist" class="form-control" name="dist" type="text" placeholder="Dist" required data-parsley-no-focus data-parsley-error-message="Please enter your name." />
                 </div>
+
                 <div class="form-group">
                     <label for="">Tipo de certificado</label>
-                    <select class="form-control select-form">
-                        <option>e-CPF</option>
-                        <option>e-CNPJ</option>
-                        <option>NF-e</option>
-                        <option>NFC-e</option>
+                    <select class="form-control select-form" ng-model="product">
+                        <option value="ecpf">e-CPF</option>
+                        <option value="ecnpj">e-CNPJ</option>
+                        <option value="nfe">NF-e</option>
+                        <option value="nfce">NFC-e</option>
                     </select>
                 </div>
                 <div class="more-links form-group">
@@ -33,9 +36,11 @@
                     <span>|</span>
                     <a href="javascript:void(0)">Saiba como comprar.</a>
                 </div>
-                <a href="javascript:void(0)" class="btn btn-primary btn-lg">Buscar certificado agora</a>
+                <a href="javascript:void(0)" ng-click="search(product, lat, lon, dist)" class="btn btn-primary btn-lg">Buscar certificado agora</a>
             </form>
         </div>
+
+        [[data]]
     </div>
     <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
 </header>
