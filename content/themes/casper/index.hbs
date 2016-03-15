@@ -17,9 +17,7 @@
             <form class="form" action="">
                 <div class="form-group">
                     <label for="">Localização</label>
-                    <input  ng-model="lat" class="form-control" name="lat" id="name" type="text" placeholder="Lat" required data-parsley-no-focus data-parsley-error-message="Please enter your name." />
-                    <input  ng-model="lon" class="form-control" name="lon" type="text" placeholder="Lon" required data-parsley-no-focus data-parsley-error-message="Please enter your name." />
-                    <input  ng-model="dist" class="form-control" name="dist" type="text" placeholder="Dist" required data-parsley-no-focus data-parsley-error-message="Please enter your name." />
+                    <input  ng-model="zipcode" class="form-control" name="zip_code" id="name" type="text" placeholder="CEP" required data-parsley-no-focus data-parsley-error-message="Please enter your CEP." />
                 </div>
 
                 <div class="form-group">
@@ -36,9 +34,11 @@
                     <span>|</span>
                     <a href="javascript:void(0)">Saiba como comprar.</a>
                 </div>
-                <a href="javascript:void(0)" ng-click="search(product, lat, lon, dist)" class="btn btn-primary btn-lg">Buscar certificado agora</a>
+                <a href="javascript:void(0)" ng-click="search(zipcode, product)" class="btn btn-primary btn-lg">Buscar certificado agora</a>
             </form>
         </div>
+
+        <div ng-show="loading">loading...</div>
 
         [[data]]
     </div>

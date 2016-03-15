@@ -6,10 +6,10 @@ angular.module('buscaCertificado', [])
   })
 
   .controller('DataController', function($scope, $http) {
-    $scope.search = function(product, lat, lon, dist){
+    $scope.search = function(zipcode, product){
       var req = {
         method: 'GET',
-        url: 'http://admin-certifica.herokuapp.com/search?product='+product+'&lat='+lat+'&lon='+lon+'&dist='+dist,
+        url: 'http://admin-certifica.herokuapp.com/search?product='+product+'&zipcode='+zipcode,
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
         transformRequest: function(obj) {
           var str = [];
@@ -18,12 +18,16 @@ angular.module('buscaCertificado', [])
           return str.join("&");
         },
       }
+
+      $scope.loading = true;
+
       $http(req)
         .success(function(data) {
-          console.log(data);
+          $scope.loading = false;
           $scope.data = data;
         }).
         error(function(data) {
+          $scope.loading = false;
           $scope.data = 'Nenhum dado encontrado';
         });
 
