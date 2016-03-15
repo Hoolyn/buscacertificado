@@ -2,6 +2,7 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
 {{! The big featured header }}
+
 <div ng-controller="DataController">
     <header class="main-header" style="background-image: url(/assets/img/cover.jpg)">
         <nav class="main-nav overlay clearfix">
@@ -18,9 +19,7 @@
                 <form class="form" action="">
                     <div class="form-group">
                         <label for="">Localização</label>
-                        <input  ng-model="lat" class="form-control" name="lat" id="name" type="text" placeholder="Lat" required data-parsley-no-focus data-parsley-error-message="Please enter your name." />
-                        <input  ng-model="lon" class="form-control" name="lon" type="text" placeholder="Lon" required data-parsley-no-focus data-parsley-error-message="Please enter your name." />
-                        <input  ng-model="dist" class="form-control" name="dist" type="text" placeholder="Dist" required data-parsley-no-focus data-parsley-error-message="Please enter your name." />
+                        <input  ng-model="zipcode" class="form-control" name="zip_code" id="name" type="text" placeholder="CEP" required data-parsley-no-focus data-parsley-error-message="Please enter your CEP." />
                     </div>
 
                     <div class="form-group">
@@ -37,7 +36,7 @@
                         <span>|</span>
                         <a href="javascript:void(0)">Saiba como comprar.</a>
                     </div>
-                    <a href="javascript:void(0)" ng-click="search(product, lat, lon, dist)" class="btn btn-primary btn-lg">Buscar certificado agora</a>
+                    <a href="javascript:void(0)" ng-click="search(zipcode, product)" class="btn btn-primary btn-lg">Buscar certificado agora</a>
                 </form>
             </div>
         </div>
@@ -47,38 +46,36 @@
 
     {{! The main content area on the homepage }}
     <main id="content" class="content" role="main">
-
-        <section class="e-result">
+        <div ng-show="loading">Carregando..</div>
+        <section class="e-result" ng-show="data">
             <div class="headding-blog"> <h2>Resultado</h2> </div>
 
-            <div class="certificate-list">
+            <div class="certificate-list" ng-repeat="item in data">
                 <div class="card-certificate">
-                    <div class="col-img">
-                        img
+                    <div class="col-img %%item.product_name%%">
                     </div>
                     <div class="certificate-type">
                         <div class="path-title">
-                            <span>E-certificado A1</span>
-                            <span>Serasa Paulista</span>
+                            <span>%%item.product_name%%</span>
+                            <span>%%item.name%%</span>
                         </div>
                         <div class="divisor"></div>
                         <div class="path-content">
-                            <span>Av. Paulista 2930 São Paulo</span>
-                            <span>E-certificado válido por 1 ano armazenamento diretamente no cartão.</span>
+                            <span>%%item.address%%</span>
+                            <span>%%item.product_name%% válido por %%item.expiration%% dias armazenamento diretamente no cartão.</span>
                         </div>
                     </div>
                     <div class="price">
                         <p class="green">
-                            <small>Por apenas R$ 150,00</small>
+                            <small>Por apenas R$ %%item.price | number:2 %%</small>
                             <br>
-                            12x de 22,92
+                            12x de %%(item.price / 12) | number:2 %%
                         </p>
-                        <a href="javascript:void(0)" class="btn btn-success btn-lg">
-                            Compra Agora
+                        <a href="%%item.link%%" class="btn btn-success btn-lg">
+                            Comprar Agora
                         </a>
                     </div>
                 </div>
-                [[data]]
             </div>
         </section>
         {{! End.e-result }}
