@@ -1,8 +1,8 @@
 angular.module('buscaCertificado', [])
 
   .config(function($interpolateProvider) {
-    $interpolateProvider.startSymbol('[[');
-    $interpolateProvider.endSymbol(']]');
+    $interpolateProvider.startSymbol('%%');
+    $interpolateProvider.endSymbol('%%');
   })
 
   .controller('DataController', function($scope, $http) {
