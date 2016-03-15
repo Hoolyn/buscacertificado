@@ -2,59 +2,93 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
 {{! The big featured header }}
-<header class="main-header" style="background-image: url(/assets/img/cover.jpg)">
-    <nav class="main-nav overlay clearfix">
-        <a class="blog-logo" href="{{@blog.url}}"><img src="/assets/img/logo-wt.png" alt="{{@blog.title}}" /></a>
-        {{#if @blog.navigation}}
-            <a class="menu-button icon-menu" href="#"></a>
-        {{/if}}
-    </nav>
-    <div class="vertical certificate-search" ng-controller="DataController">
-        <div class="main-header-content inner">
-            <h1 class="page-title">Encontre um posto de vendas de <strong>Certificado Digital</strong><br>próximo de você.</h1>
+<div ng-controller="DataController">
+    <header class="main-header" style="background-image: url(/assets/img/cover.jpg)">
+        <nav class="main-nav overlay clearfix">
+            <a class="blog-logo" href="{{@blog.url}}"><img src="/assets/img/logo-wt.png" alt="{{@blog.title}}" /></a>
+            {{#if @blog.navigation}}
+                <a class="menu-button icon-menu" href="#"></a>
+            {{/if}}
+        </nav>
+        <div class="vertical certificate-search">
+            <div class="main-header-content inner">
+                <h1 class="page-title">Encontre um posto de vendas de <strong>Certificado Digital</strong><br>próximo de você.</h1>
+            </div>
+            <div class="search-location">
+                <form class="form" action="">
+                    <div class="form-group">
+                        <label for="">Localização</label>
+                        <input  ng-model="lat" class="form-control" name="lat" id="name" type="text" placeholder="Lat" required data-parsley-no-focus data-parsley-error-message="Please enter your name." />
+                        <input  ng-model="lon" class="form-control" name="lon" type="text" placeholder="Lon" required data-parsley-no-focus data-parsley-error-message="Please enter your name." />
+                        <input  ng-model="dist" class="form-control" name="dist" type="text" placeholder="Dist" required data-parsley-no-focus data-parsley-error-message="Please enter your name." />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Tipo de certificado</label>
+                        <select class="form-control select-form" ng-model="product">
+                            <option value="ecpf">e-CPF</option>
+                            <option value="ecnpj">e-CNPJ</option>
+                            <option value="nfe">NF-e</option>
+                            <option value="nfce">NFC-e</option>
+                        </select>
+                    </div>
+                    <div class="more-links form-group">
+                        <a href="javascript:void(0)">Entenda os tipos de certificado digital.</a>
+                        <span>|</span>
+                        <a href="javascript:void(0)">Saiba como comprar.</a>
+                    </div>
+                    <a href="javascript:void(0)" ng-click="search(product, lat, lon, dist)" class="btn btn-primary btn-lg">Buscar certificado agora</a>
+                </form>
+            </div>
         </div>
-        <div class="search-location">
-            <form class="form" action="">
-                <div class="form-group">
-                    <label for="">Localização</label>
-                    <input  ng-model="lat" class="form-control" name="lat" id="name" type="text" placeholder="Lat" required data-parsley-no-focus data-parsley-error-message="Please enter your name." />
-                    <input  ng-model="lon" class="form-control" name="lon" type="text" placeholder="Lon" required data-parsley-no-focus data-parsley-error-message="Please enter your name." />
-                    <input  ng-model="dist" class="form-control" name="dist" type="text" placeholder="Dist" required data-parsley-no-focus data-parsley-error-message="Please enter your name." />
+
+        <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+    </header>
+
+    {{! The main content area on the homepage }}
+    <main id="content" class="content" role="main">
+
+        <section class="e-result">
+            <div class="headding-blog"> <h2>Resultado</h2> </div>
+
+            <div class="certificate-list">
+                <div class="card-certificate">
+                    <div class="col-img">
+                        img
+                    </div>
+                    <div class="certificate-type">
+                        <div class="path-title">
+                            <span>E-certificado A1</span>
+                            <span>Serasa Paulista</span>
+                        </div>
+                        <div class="divisor"></div>
+                        <div class="path-content">
+                            <span>Av. Paulista 2930 São Paulo</span>
+                            <span>E-certificado válido por 1 ano armazenamento diretamente no cartão.</span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <p class="green">
+                            <small>Por apenas R$ 150,00</small>
+                            <br>
+                            12x de 22,92
+                        </p>
+                        <a href="javascript:void(0)" class="btn btn-success btn-lg">
+                            Compra Agora
+                        </a>
+                    </div>
                 </div>
+                [[data]]
+            </div>
+        </section>
+        {{! End.e-result }}
 
-                <div class="form-group">
-                    <label for="">Tipo de certificado</label>
-                    <select class="form-control select-form" ng-model="product">
-                        <option value="ecpf">e-CPF</option>
-                        <option value="ecnpj">e-CNPJ</option>
-                        <option value="nfe">NF-e</option>
-                        <option value="nfce">NFC-e</option>
-                    </select>
-                </div>
-                <div class="more-links form-group">
-                    <a href="javascript:void(0)">Entenda os tipos de certificado digital.</a>
-                    <span>|</span>
-                    <a href="javascript:void(0)">Saiba como comprar.</a>
-                </div>
-                <a href="javascript:void(0)" ng-click="search(product, lat, lon, dist)" class="btn btn-primary btn-lg">Buscar certificado agora</a>
-            </form>
-        </div>
+        <div class="headding-blog"> <h2>Dicas e Noticias</h2> </div>
 
-        [[data]]
-    </div>
-    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
-</header>
+        {{! The tag below includes the post loop - partials/loop.hbs }}
+        <div class="main-posts">
+            {{> "loop"}}
+        <div class="main-posts">
 
-{{! The main content area on the homepage }}
-<main id="content" class="content" role="main">
-
-    <div class="headding-blog">
-        <h2>Dicas e Noticias</h2>
-    </div>
-
-    {{! The tag below includes the post loop - partials/loop.hbs }}
-    <div class="main-posts">
-        {{> "loop"}}
-    <div class="main-posts">
-
-</main>
+    </main>
+</div>

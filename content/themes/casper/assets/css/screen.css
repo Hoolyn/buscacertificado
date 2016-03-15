@@ -3,7 +3,6 @@
    ========================================================================== */
 
 /*
-
     0.  Normalize
     1.  Icons
     2.  General
@@ -19,7 +18,8 @@
     11. Media Queries (Tablet)
     12. Media Queries (Mobile)
     13. Animations
-
+    14. Components
+    15. Other styles
 */
 
 /* ==========================================================================
@@ -478,6 +478,19 @@ margin on the iframe, cause it breaks stuff. */
     background-color: #204d74;
     border-color: #122b40;
 }
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+.btn-success.active.focus,
+.btn-success.active:hover,
+.btn-success:hover {
+    color: #fff;
+    background-color: #398439;
+    border-color: #255625;
+}
+
 
 /* btn size */
 .btn-lg {
@@ -1005,7 +1018,7 @@ body.nav-opened .nav {
 
 .headding-blog {
     width: 100%;
-    display: block;
+    display: inline-block;
     text-align: center;
 }
 .headding-blog h2 {
@@ -2178,6 +2191,100 @@ h3.post-title {
         -webkit-transform: translateY(-5px) rotate(-90deg);
                 transform: translateY(-5px) rotate(-90deg);
     }
+}
+
+/* ==========================================================================
+   14. Components
+   ========================================================================== */
+
+/* Card result */
+.card-certificate {
+    background: transparent;
+    border: 1px solid #dadada;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 0px;
+    padding: 15px 10px;
+    border-radius: 4px;
+    font-family: "Open sans", "Helvetica neue", Arial, sans-serif;
+    box-sizing: border-box;
+}
+.card-certificate .col-img {
+    width: 20%;
+    float: left;
+}
+.certificate-type {
+    width: 53%;
+    margin-top: 10px;
+    border-right: 1px solid #dadada;
+    float: left;
+    padding-right: 10px;
+}
+.certificate-type .path-content span,
+.certificate-type .path-title span {
+    display: block;
+    width: 100%;
+    line-height: 1.6em;
+}
+.certificate-type .path-title { margin-bottom: 10px; }
+.certificate-type .path-title span {
+    font-weight: bold;
+    color: #3278B4;
+}
+.certificate-type .path-title span:last-child { font-weight: normal; }
+
+.certificate-type .path-content { margin-top: 10px; }
+.certificate-type .path-content span {
+    font-size: 14px;
+}
+.certificate-type .divisor { border-top: solid 1px #dadada; }
+.price {
+    padding-left: 15px;
+    border-radius: 0;
+    overflow: hidden;
+    width: 24%;
+    background-color: transparent;
+    background-color: white;
+    margin: 10px 0;
+    float: left;
+    text-align: center;
+}
+.price p.green {
+    font-size: 28px;
+    color: #2ECC71;
+    margin: 0;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    margin-bottom: 15px;
+}
+.price small {
+    line-height: 1.7em;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+
+/* ==========================================================================
+   15. Other styles
+   ========================================================================== */
+
+/* e-result section */
+.e-result {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 15px;
+}
+.e-result::before {
+    content: "";
+    display: block;
+    clear: both;
+}
+.certificate-list {
+    display: block;
+    margin: 0;
 }
 
 
