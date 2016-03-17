@@ -2288,6 +2288,28 @@ h3.post-title {
 }
 
 
+/* Loader */
+.loader-main {
+    text-align: center;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: #3278B4;
+    letter-spacing: 0.7px;
+    margin-bottom: 30px;
+}
+.loader {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  vertical-align: top;
+  height: 40px;
+}
+
+svg path,
+svg rect {
+  fill: #3278B4;
+}
+
+
 /* ==========================================================================
    End of file. Animations should be the last thing here. Do not add stuff
    below this point, or it will probably fuck everything up.
