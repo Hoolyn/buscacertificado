@@ -85,6 +85,17 @@
                         <div class="path-content">
                             <span>%%item.address%%</span>
                             <span>%%item.product_name%% válido por %%item.expiration%% dias armazenamento diretamente no cartão.</span>
+
+                            <a href="javascript:void(0)" class="show-all-info" ng-click="show = !show">Mais informações</a>
+                            <div class="all-details" ng-show="show">
+                                <ul class="more-info-content">
+                                    <li> Horário de atendimento: <strong> %% item.schedule %% </strong> </li>
+                                    <li class="%% item.parking %%">Possui estacionameto:</li>
+                                    <li class="%% item.in_loco_service %%">Aténdimento in Loco:</li>
+                                    <li class="%% item.online_booking %%">Reserva Online:</li>
+                                    <li class="%% item.accessibility %%">Acessibilidade:</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="price">

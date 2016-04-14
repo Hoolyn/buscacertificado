@@ -2215,12 +2215,18 @@ h3.post-title {
     width: 20%;
     float: left;
 }
+.card-certificate .ecpf {
+    background: url('../img/e-cpf.png') no-repeat;
+    background-size: cover;
+    height: 160px;
+}
 .certificate-type {
-    width: 53%;
+    width: 52%;
     margin-top: 10px;
+    border-left: 1px solid #dadada;
     border-right: 1px solid #dadada;
     float: left;
-    padding-right: 10px;
+    padding: 0 10px;
 }
 .certificate-type .path-content span,
 .certificate-type .path-title span {
@@ -2236,9 +2242,29 @@ h3.post-title {
 .certificate-type .path-title span:last-child { font-weight: normal; }
 
 .certificate-type .path-content { margin-top: 10px; }
-.certificate-type .path-content span {
+.certificate-type .path-content span { font-size: 14px; }
+.certificate-type .path-content a {
+    color: #428bca;
     font-size: 14px;
 }
+.certificate-type .more-info-content {
+    margin: 0;
+    padding: 0;
+}
+
+.certificate-type .more-info-content .false::after { content: " Não"; }
+.certificate-type .more-info-content .true::after { content: " Sim"; }
+.certificate-type .more-info-content .false::after,
+.certificate-type .more-info-content .true::after {
+    font-weight: bold;
+}
+
+.certificate-type .more-info-content li {
+    list-style: none;
+    font-size: 14px;
+    margin: 0;
+}
+
 .certificate-type .divisor { border-top: solid 1px #dadada; }
 .price {
     padding-left: 15px;
