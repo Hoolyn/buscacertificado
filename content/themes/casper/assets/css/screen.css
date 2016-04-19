@@ -2364,9 +2364,8 @@ svg rect {
     color: #fff;
     font-family: Lato, "Hevetica Neue", Arial, sans-serif;
 }
-.newsletter h2 {
-    text-align: center;
-}
+.newsletter h2 { text-align: center; }
+
 .newsletter p {
     margin: 0;
     text-align: center;
@@ -2397,9 +2396,8 @@ svg rect {
     color: #097eb9;
     font-family: Lato, "Hevetica Neue", Arial, sans-serif;
 }
-.newsletter .newsform input:focus {
-    border-color: #097eb9;
-}
+.newsletter .newsform input:focus { border-color: #097eb9; }
+
 .newsletter .newsform .btn-send {
     width: 100px;
     text-align: center;
@@ -2411,6 +2409,13 @@ svg rect {
     -ms-transition: .3s ease;
     transition: .3s ease;
 }
+
+.fake-map, #map {
+    max-width: 100%;
+    height: 400px;
+}
+
+
 
 /* ==========================================================================
    End of file. Animations should be the last thing here. Do not add stuff
