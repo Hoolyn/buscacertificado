@@ -2435,6 +2435,7 @@ svg rect {
 .call-station h2 {
     color: #39ACE6;
     font-size: 38px;
+    margin-bottom: 35px;
 }
 .call-station h2,
 .call-station p {
