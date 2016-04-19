@@ -491,6 +491,18 @@ margin on the iframe, cause it breaks stuff. */
     border-color: #255625;
 }
 
+.btn-outline-inverse {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+}
+.btn-outline-inverse:hover {
+    background-color: #fff;
+    color: #39ACE6;
+    border-color: #fff;
+    text-shadow: none;
+}
+
 
 /* btn size */
 .btn-lg {
@@ -2335,6 +2347,70 @@ svg rect {
   fill: #3278B4;
 }
 
+
+/* Newsletter */
+.newsletter {
+    max-width: 100%;
+    background: #39ACE6;
+    padding: 60px 15px;
+}
+.newsletter .wrapper {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.newsletter h2,
+.newsletter p {
+    color: #fff;
+    font-family: Lato, "Hevetica Neue", Arial, sans-serif;
+}
+.newsletter h2 {
+    text-align: center;
+}
+.newsletter p {
+    margin: 0;
+    text-align: center;
+    line-height: 1.6em;
+    font-weight: 300;
+}
+.newsletter .newsform {
+    margin-top: 20px;
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.newsletter .newsform input {
+    margin-bottom: 20px;
+    padding: 5px 8px;
+    height: 38px;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    transition: .3s ease;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    outline: 0;
+    border: 1px solid #097eb9;
+    font-size: 14px;
+    color: #097eb9;
+    font-family: Lato, "Hevetica Neue", Arial, sans-serif;
+}
+.newsletter .newsform input:focus {
+    border-color: #097eb9;
+}
+.newsletter .newsform .btn-send {
+    width: 100px;
+    text-align: center;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    transition: .3s ease;
+}
 
 /* ==========================================================================
    End of file. Animations should be the last thing here. Do not add stuff
